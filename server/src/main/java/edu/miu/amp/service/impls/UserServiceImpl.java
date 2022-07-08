@@ -186,7 +186,7 @@ public class UserServiceImpl implements UserService {
         MimeMessageHelper helper = new MimeMessageHelper(message);
 
 
-        helper.setFrom("bibek.karki001@gmail.com", "check it out");
+        helper.setFrom("sachin8peace@gmail.com", "check it out");
         helper.setTo(recipientEmail);
 
         String subject = "Here's the link to reset your password";
