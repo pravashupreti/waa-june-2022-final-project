@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor@NoArgsConstructor
 @Embeddable
 public class Address {
-//    private Integer id;
+
     private String city;
     private String state;
     private String zip;

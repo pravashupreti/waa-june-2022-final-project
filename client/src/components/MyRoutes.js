@@ -1,13 +1,15 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import StudentProfile from './profiles/StudentProfile'
-import Main from './dashboard/Main'
+import Dashboard from './dashboard/Dashboard'
+import UserProfile from './profiles/UserProfile'
 export default function MyRoutes(){
     return(
         <div>
             <Routes>
                 {/* <Route path="/main" element={<Main />}>Main</Route> */}
-                <Route path="/student-profile" element={<StudentProfile />}>My Profile</Route>
+                <Route path="/user-profile" element={<UserProfile />}>My Profile</Route>
+                <Route path="/dashboard" element={<Dashboard />}>Dashboard</Route>
+
             </Routes>
         </div>
     )
