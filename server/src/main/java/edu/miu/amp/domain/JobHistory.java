@@ -12,10 +12,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobHistory {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class JobHistory extends BaseEntity{
 
     @Column(name = "company_name")
     private String companyName;

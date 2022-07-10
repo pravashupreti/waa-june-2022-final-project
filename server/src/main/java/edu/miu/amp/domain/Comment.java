@@ -11,10 +11,8 @@ import javax.persistence.*;
 @AllArgsConstructor@NoArgsConstructor
 
 
-public class Comment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class Comment extends BaseEntity{
+
     private String comment;
 
 }

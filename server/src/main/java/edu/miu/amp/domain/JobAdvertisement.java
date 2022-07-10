@@ -13,18 +13,15 @@ import java.util.List;
 
 @Data
 @Entity
-@AllArgsConstructor@NoArgsConstructor
-@SQLDelete(sql = "UPDATE JobAdvertisement SET delete = true where id = ?")
-@Where(clause = "deleted=false")
-public class JobAdvertisement {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+@AllArgsConstructor
+@NoArgsConstructor
+public class JobAdvertisement extends BaseEntity{
+
 
     private String title;
 
     @Nullable
-    @Column(columnDefinition="text")
+    @Column(columnDefinition = "text")
 
     private String description;
 
@@ -41,12 +38,11 @@ public class JobAdvertisement {
     private List<Tag> tags;
 
     @ManyToOne
-    @JoinColumn(name="createdBy")
+    @JoinColumn(name = "createdBy")
     private Student createdBy;
 
     @OneToMany
     private List<JobApplication> jobApplicationList;
 
-    @ColumnDefault("false")
-    private boolean delete;
+
 }

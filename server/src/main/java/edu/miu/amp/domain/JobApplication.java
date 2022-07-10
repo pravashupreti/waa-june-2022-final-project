@@ -13,12 +13,8 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@SQLDelete(sql = "UPDATE JobApplication SET delete = true where id = ?")
-@Where(clause = "deleted=false")
-public class JobApplication {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
+public class JobApplication extends BaseEntity{
 
     @ManyToOne
     private JobAdvertisement jobAdvertisement;
@@ -26,6 +22,5 @@ public class JobApplication {
     @ManyToMany
     private List<Student> studentList;
 
-    private boolean deleted = Boolean.FALSE;
 
 }

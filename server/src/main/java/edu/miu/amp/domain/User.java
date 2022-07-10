@@ -7,6 +7,7 @@ import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Data
 @Entity
@@ -15,10 +16,7 @@ import java.time.LocalDate;
 @Table(name = "users")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 
-public class User {
-    @Id
-    @GeneratedValue
-    private Integer id;
+public class User extends BaseEntity{
 
     private String firstName;
     private String lastName;

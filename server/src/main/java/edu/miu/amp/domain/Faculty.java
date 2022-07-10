@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -13,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Faculty extends User {
     @Id
-    private Integer id;
+    private UUID id;
 
     @ManyToOne
     private Department department;

@@ -13,8 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student extends User {
-    @Id
-    private Integer id;
 
     @Nullable
     private Float gpa;
