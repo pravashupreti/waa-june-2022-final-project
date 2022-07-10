@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { FacultyRegistration } from "../pages/faculty/Registration";
 import UserProfile from "../components/profiles/UserProfile";
