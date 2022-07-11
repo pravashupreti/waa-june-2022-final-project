@@ -45,7 +45,7 @@ function Menu() {
       id: 1,
       name: "Job Lists",
       icon: "none",
-      url: "job-advertisement",
+      url: "job-advertisements",
       active: false,
     },
     {
@@ -59,7 +59,7 @@ function Menu() {
       id: 3,
       name: "Create Job Ad",
       icon: "none",
-      url: "job-advertisement/add",
+      url: "job-advertisements/add",
       active: false,
     },
     {
@@ -90,7 +90,7 @@ function Menu() {
       id: 1,
       name: "Job List",
       icon: "none",
-      url: "job-advertisement",
+      url: "job-advertisements",
       active: false,
     },
     {

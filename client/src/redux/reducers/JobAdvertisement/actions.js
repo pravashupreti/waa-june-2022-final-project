@@ -10,7 +10,7 @@ export const allJobAdvertisement = () => ({
   type: LIST_JOB_ADVERTISEMENT,
   payload: {
     request: {
-      url: "/job-advertisement",
+      url: "/job-advertisements",
     },
   },
 });
@@ -20,7 +20,7 @@ export const addJobAdvertisement = (job) => {
     type: ADD_JOB_ADVERTISEMENT,
     payload: {
       request: {
-        url: "/job-advertisement",
+        url: "/job-advertisements",
         method: HttpService.HttpMethods.POST,
         data: job,
       },
@@ -34,7 +34,7 @@ export const deleteJobAdvertisement = (job) => {
     payload: {
       job,
       request: {
-        url: `/job-advertisement/${job.id}`,
+        url: `/job-advertisements/${job.id}`,
         method: HttpService.HttpMethods.DELETE,
       },
     },
