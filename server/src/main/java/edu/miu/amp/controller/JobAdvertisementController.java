@@ -37,7 +37,7 @@ public class JobAdvertisementController {
 
 
     @PostMapping
-//    @RolesAllowed("student")
+    @RolesAllowed("student")
     public ResponseEntity<JobAdvertisementDto> create(@RequestBody JobAdvertisementDto jobAdvertisementDto){
         return new ResponseEntity<> (jobAdvertisementService.save(jobAdvertisementDto), HttpStatus.CREATED);
 

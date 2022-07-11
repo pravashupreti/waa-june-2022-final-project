@@ -393,3 +393,13 @@ VALUES (10013, 'Great job my dear student', TRUE, 10002, 10012);
 
 INSERT INTO comment (id, comment, deleted, student_id, faculty_id)
 VALUES (10014, 'You are genius.', FALSE, 10002, 10012);
+
+
+-- Reset primary key sequence
+select setval('job_advertisement_id_seq', max(id)) from job_advertisement;
+select setval('comment_id_seq', max(id)) from comment;
+select setval('job_application_id_seq', max(id)) from job_application;
+select setval('job_history_id_seq', max(id)) from job_history;
+select setval('tag_id_seq', max(id)) from tag;
+select setval('users_id_seq', max(id)) from users;
+

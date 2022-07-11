@@ -72,11 +72,11 @@ export default function JobFilter(props) {
   };
 
   const cityList = [
-    ...new Set(jobAdvertisement.map((data) => data.address.city)),
+    ...new Set(jobAdvertisement.map((data) => data.address?.city)),
   ];
 
   const stateList = [
-    ...new Set(jobAdvertisement.map((data) => data.address.state)),
+    ...new Set(jobAdvertisement.map((data) => data.address?.state)),
   ];
 
   useEffect(() => {

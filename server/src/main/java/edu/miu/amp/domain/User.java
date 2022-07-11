@@ -16,12 +16,17 @@ import java.time.LocalDate;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String firstName;
     private String lastName;
+
+    @Column(unique = true)
     private String email;
+
+    @Column(unique = true)
+
     private String userName;
 
     @Embedded
