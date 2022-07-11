@@ -25,7 +25,7 @@ export default function JobListings(props) {
       <div className="row">
         {jobState &&
           [...jobState]
-            .sort((x, y) => (x.id > y.id ? 1 : -1))
+            .sort((x, y) => (x.id < y.id ? 1 : -1))
             .map((job) => {
               return (
                 <JobListing

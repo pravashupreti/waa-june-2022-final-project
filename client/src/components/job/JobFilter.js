@@ -41,9 +41,13 @@ export default function JobFilter(props) {
     if (!filterForm.title) return data;
 
     return data.filter((x) => {
-      return x.description
-        .toLowerCase()
-        .includes(filterForm.title.toLowerCase());
+      return (
+        x.description
+          ?.toLowerCase()
+          .includes(filterForm.title?.toLowerCase()) ||
+        x.title?.toLowerCase().includes(filterForm.title.toLowerCase()) ||
+        x.benefits?.toLowerCase().includes(filterForm.title.toLowerCase())
+      );
     });
   };
 
@@ -51,7 +55,7 @@ export default function JobFilter(props) {
     if (!filterForm.city) return data;
 
     return data.filter((x) => {
-      return x.address.city
+      return x.address?.city
         .toLowerCase()
         .includes(filterForm.city.toLowerCase());
     });
@@ -61,7 +65,7 @@ export default function JobFilter(props) {
     if (!filterForm.state) return data;
 
     return data.filter((x) => {
-      return x.address.state
+      return x.address?.state
         .toLowerCase()
         .includes(filterForm.state.toLowerCase());
     });
@@ -90,7 +94,7 @@ export default function JobFilter(props) {
         <Row>
           <Form.Group className="mb-3 col-3">
             <Form.Label htmlFor="name" className="form-label">
-              Title
+              Key words
             </Form.Label>
             <Form.Control
               type="text"

@@ -18,7 +18,7 @@ export default function Header() {
       className="header-navigation"
     >
       <Container fluid>
-        <Navbar.Brand as={Link} to="/dashboard">
+        <Navbar.Brand as={Link} to="/">
           Alumni Management Portal
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
