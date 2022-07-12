@@ -6,10 +6,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./index.css";
 import UserService from "../../services/UserService";
+import { useSelector } from "react-redux";
 
 var FontAwesomeIcon = require("react-fontawesome");
 
 export default function Header() {
+  const userProfile = useSelector((state) => state.userProfile);
+
   return (
     <Navbar
       bg="primary"
@@ -35,7 +38,7 @@ export default function Header() {
           </div>
 
           <span className="navbar-text navbar-right">
-            {UserService.getUsername()}
+            {userProfile?.firstName}
           </span>
 
           <button
